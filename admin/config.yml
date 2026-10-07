@@ -1,19 +1,8 @@
-# Decap CMS — Minh Hải
-#
-# The GitHub backend needs an OAuth proxy for secure login.
-# Set auth_proxy_url to the worker URL you deploy, then replace the placeholder.
-#
-# Example:
-#   auth_proxy_url: https://minh-hai-decap-proxy.your-account.workers.dev
-#
 backend:
-  name: github
-  repo: haidn-BHLD/bao-ho-lao-dong-minh-hai
+  name: turbo-github
+  turbo_site_id: 39f7de4b-c963-44f6-a8be-7b68097250ae
   branch: main
-  base_url: https://REPLACE_WITH_YOUR_OAUTH_PROXY
-  auth_endpoint: /auth
 
-# Product images are committed into the repository.
 media_folder: "assets/products"
 public_folder: "assets/products"
 
@@ -41,29 +30,33 @@ collections:
                 name: "name"
                 widget: "string"
                 hint: "Tên hiển thị trên website."
+
               - label: "Tên hãng"
                 name: "brand"
                 widget: "string"
                 hint: "Ví dụ: 3M, K2, Hans, Kingman..."
+
               - label: "Nhóm sản phẩm"
                 name: "category"
                 widget: "select"
                 options:
                   - {label: "Quần áo", value: "clothing"}
-                  - {label: "Giày", value: "footwear"}
+                  - {label: "Giày bảo hộ", value: "footwear"}
                   - {label: "Mũ & bảo vệ đầu", value: "head"}
                   - {label: "Găng tay", value: "hand"}
                   - {label: "Kính & mặt", value: "eye"}
                   - {label: "Chống rơi", value: "fall"}
                   - {label: "Bảo vệ hô hấp", value: "respiratory"}
+
               - label: "Ảnh sản phẩm"
                 name: "image"
                 widget: "image"
                 required: false
-                hint: "Ưu tiên WebP/JPEG tối ưu dung lượng. Ảnh sẽ được lưu vào assets/products/."
+                hint: "Ưu tiên WebP/JPEG đã tối ưu."
                 media_library:
                   config:
                     max_file_size: 5242880
+
               - label: "Mô tả"
                 name: "description"
                 widget: "text"
