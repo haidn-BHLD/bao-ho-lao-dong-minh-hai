@@ -3,6 +3,18 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <script>
+    (() => {
+      try {
+        const savedTheme = localStorage.getItem("mh-theme");
+        const systemDark = window.matchMedia && window.matchMedia("(prefers-color-scheme: dark)").matches;
+        document.documentElement.dataset.theme = savedTheme || (systemDark ? "dark" : "light");
+      } catch (error) {
+        document.documentElement.dataset.theme = "light";
+      }
+    })();
+  </script>
   <title>Kính bảo hộ Thái Nguyên | Minh Hải</title>
   <meta name="description" content="Minh Hải cung cấp và tư vấn kính bảo hộ, thiết bị bảo vệ mắt và mặt tại Thái Nguyên. Liên hệ để tham khảo mẫu và báo giá.">
   <meta name="robots" content="index,follow,max-image-preview:large">
@@ -27,7 +39,7 @@
     {
       "@type": "ListItem",
       "position": 2,
-      "name": "Kính bảo hộ Thái Nguyên",
+      "name": "Kính bảo hộ",
       "item": "https://baoholaodongminhhaitn.com/kinh-bao-ho/"
     }
   ]
@@ -46,16 +58,20 @@
         <a href="../#gioi-thieu">Giới thiệu</a>
         <a href="../#lien-he">Liên hệ</a>
       </nav>
+      <button class="theme-toggle" type="button" data-theme-toggle aria-label="Chuyển giao diện sáng/tối" title="Chuyển giao diện sáng/tối">
+        <span class="theme-toggle-icon" aria-hidden="true">☾</span>
+      </button>
+
       <a class="btn btn-primary nav-cta" href="tel:0915418416">Gọi 0915 418 416</a>
     </div>
   </header>
 
   <main>
-    <div class="container breadcrumbs"><a href="../">Trang chủ</a> / Kính bảo hộ Thái Nguyên</div>
+    <div class="container breadcrumbs"><a href="../">Trang chủ</a> / Kính bảo hộ</div>
     <section class="category-hero">
       <div class="container">
         <span class="eyebrow">MINH HẢI • THÁI NGUYÊN</span>
-        <h1>Kính bảo hộ Thái Nguyên</h1>
+        <h1>Kính bảo hộ</h1>
         <p>Minh Hải cung cấp và tư vấn kính bảo hộ, thiết bị bảo vệ mắt và mặt tại Thái Nguyên. Liên hệ để tham khảo mẫu và báo giá.</p>
         <div class="hero-actions">
           <a class="btn btn-primary" href="../#san-pham">Xem danh mục sản phẩm</a>
@@ -67,7 +83,7 @@
     <section class="section">
       <div class="container category-content-grid">
         <article class="category-copy">
-          <h2>Kính bảo hộ cho nhu cầu lao động tại Thái Nguyên</h2>
+          <h2>Kính và thiết bị bảo vệ mắt, mặt</h2>
           <p>Kính bảo hộ và thiết bị bảo vệ mặt hỗ trợ bảo vệ mắt, vùng mặt trong các môi trường có yêu cầu phù hợp. Việc lựa chọn nên căn cứ vào công việc, tác nhân và điều kiện sử dụng thực tế.</p>
           <h3>Nhóm nhu cầu tham khảo</h3>
           <ul><li>Kính bảo hộ lao động</li><li>Thiết bị bảo vệ mắt và mặt</li><li>Lựa chọn theo nhu cầu công việc thực tế</li></ul>
@@ -82,7 +98,7 @@
 
         <aside class="info-card">
           <span class="eyebrow">LIÊN HỆ MINH HẢI</span>
-          <h2>Tư vấn sản phẩm tại Thái Nguyên</h2>
+          <h2>Tư vấn sản phẩm</h2>
           <p>Trao đổi nhu cầu sử dụng, mẫu hàng và thông tin chi tiết trực tiếp với Minh Hải.</p>
           <div class="info-list">
             <a href="tel:0915418416">☎ 0915 418 416</a>
@@ -97,10 +113,11 @@
 
   <footer class="site-footer">
     <div class="container footer-grid">
-      <div><strong>BẢO HỘ LAO ĐỘNG MINH HẢI THÁI NGUYÊN</strong><p>Thiết bị bảo hộ lao động cho nhiều nhu cầu sử dụng.</p></div>
+      <div><strong>BẢO HỘ LAO ĐỘNG MINH HẢI</strong><p>Thiết bị bảo hộ lao động cho nhiều nhu cầu sử dụng.</p></div>
       <div class="footer-links"><a href="../">Trang chủ</a><a href="../#san-pham">Sản phẩm</a><a href="../#lien-he">Liên hệ</a></div>
     </div>
     <div class="container footer-bottom"><span>Minh Hải • Thái Nguyên</span><span>Điện thoại: 0915 418 416</span></div>
   </footer>
+  <script src="../theme.js"></script>
 </body>
 </html>

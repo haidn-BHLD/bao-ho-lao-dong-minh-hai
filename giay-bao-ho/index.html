@@ -3,6 +3,18 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <script>
+    (() => {
+      try {
+        const savedTheme = localStorage.getItem("mh-theme");
+        const systemDark = window.matchMedia && window.matchMedia("(prefers-color-scheme: dark)").matches;
+        document.documentElement.dataset.theme = savedTheme || (systemDark ? "dark" : "light");
+      } catch (error) {
+        document.documentElement.dataset.theme = "light";
+      }
+    })();
+  </script>
   <title>Giày bảo hộ Thái Nguyên | Minh Hải</title>
   <meta name="description" content="Minh Hải cung cấp và tư vấn các dòng giày bảo hộ tại Thái Nguyên cho nhu cầu công trình, nhà xưởng và môi trường lao động. Liên hệ để xem mẫu và báo giá.">
   <meta name="robots" content="index,follow,max-image-preview:large">
@@ -27,7 +39,7 @@
     {
       "@type": "ListItem",
       "position": 2,
-      "name": "Giày bảo hộ Thái Nguyên",
+      "name": "Giày bảo hộ",
       "item": "https://baoholaodongminhhaitn.com/giay-bao-ho/"
     }
   ]
@@ -46,16 +58,20 @@
         <a href="../#gioi-thieu">Giới thiệu</a>
         <a href="../#lien-he">Liên hệ</a>
       </nav>
+      <button class="theme-toggle" type="button" data-theme-toggle aria-label="Chuyển giao diện sáng/tối" title="Chuyển giao diện sáng/tối">
+        <span class="theme-toggle-icon" aria-hidden="true">☾</span>
+      </button>
+
       <a class="btn btn-primary nav-cta" href="tel:0915418416">Gọi 0915 418 416</a>
     </div>
   </header>
 
   <main>
-    <div class="container breadcrumbs"><a href="../">Trang chủ</a> / Giày bảo hộ Thái Nguyên</div>
+    <div class="container breadcrumbs"><a href="../">Trang chủ</a> / Giày bảo hộ</div>
     <section class="category-hero">
       <div class="container">
         <span class="eyebrow">MINH HẢI • THÁI NGUYÊN</span>
-        <h1>Giày bảo hộ Thái Nguyên</h1>
+        <h1>Giày bảo hộ</h1>
         <p>Minh Hải cung cấp và tư vấn các dòng giày bảo hộ tại Thái Nguyên cho nhu cầu công trình, nhà xưởng và môi trường lao động. Liên hệ để xem mẫu và báo giá.</p>
         <div class="hero-actions">
           <a class="btn btn-primary" href="../#san-pham">Xem danh mục sản phẩm</a>
@@ -67,7 +83,7 @@
     <section class="section">
       <div class="container category-content-grid">
         <article class="category-copy">
-          <h2>Giày bảo hộ cho nhu cầu lao động tại Thái Nguyên</h2>
+          <h2>Giày bảo hộ cho công trình và nhà xưởng</h2>
           <p>Giày bảo hộ là nhóm sản phẩm giúp bảo vệ bàn chân trong nhiều môi trường làm việc. Tại Minh Hải Thái Nguyên, khách hàng có thể tham khảo các mẫu giày theo nhu cầu sử dụng thực tế và trao đổi trực tiếp để lựa chọn phù hợp.</p>
           <h3>Nhóm nhu cầu tham khảo</h3>
           <ul><li>Nhu cầu công trình và thi công</li><li>Môi trường nhà xưởng và sản xuất</li><li>Nhu cầu đi lại, thao tác và bảo vệ bàn chân trong công việc</li></ul>
@@ -82,7 +98,7 @@
 
         <aside class="info-card">
           <span class="eyebrow">LIÊN HỆ MINH HẢI</span>
-          <h2>Tư vấn sản phẩm tại Thái Nguyên</h2>
+          <h2>Tư vấn sản phẩm</h2>
           <p>Trao đổi nhu cầu sử dụng, mẫu hàng và thông tin chi tiết trực tiếp với Minh Hải.</p>
           <div class="info-list">
             <a href="tel:0915418416">☎ 0915 418 416</a>
@@ -97,10 +113,11 @@
 
   <footer class="site-footer">
     <div class="container footer-grid">
-      <div><strong>BẢO HỘ LAO ĐỘNG MINH HẢI THÁI NGUYÊN</strong><p>Thiết bị bảo hộ lao động cho nhiều nhu cầu sử dụng.</p></div>
+      <div><strong>BẢO HỘ LAO ĐỘNG MINH HẢI</strong><p>Thiết bị bảo hộ lao động cho nhiều nhu cầu sử dụng.</p></div>
       <div class="footer-links"><a href="../">Trang chủ</a><a href="../#san-pham">Sản phẩm</a><a href="../#lien-he">Liên hệ</a></div>
     </div>
     <div class="container footer-bottom"><span>Minh Hải • Thái Nguyên</span><span>Điện thoại: 0915 418 416</span></div>
   </footer>
+  <script src="../theme.js"></script>
 </body>
 </html>

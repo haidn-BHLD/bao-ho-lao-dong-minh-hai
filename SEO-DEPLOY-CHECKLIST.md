@@ -38,3 +38,10 @@ Sau đó dùng Google Search Console → Kiểm tra URL cho trang chủ và 2 tr
 ## Lưu ý
 
 SEO kỹ thuật và nội dung giúp Google hiểu website tốt hơn nhưng không thể bảo đảm vị trí số 1. Local Search còn phụ thuộc mức độ liên quan, khoảng cách và mức độ nổi bật; cần tiếp tục hoàn thiện Google Business Profile, ảnh thực tế, review thật và các nguồn uy tín liên kết/nhắc đến doanh nghiệp.
+
+## Kiểm tra V4.1
+- [ ] Tên thẻ danh mục hiển thị: “Giày bảo hộ”, “Quần áo bảo hộ”... không lặp “Thái Nguyên”.
+- [ ] Title/meta của các trang danh mục vẫn chứa tín hiệu địa phương phù hợp.
+- [ ] Nút trăng/mặt trời đổi được Light/Dark trên trang chủ và các trang danh mục.
+- [ ] Reload trang vẫn giữ lựa chọn giao diện.
+

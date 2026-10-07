@@ -4,6 +4,18 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
 
+  <script>
+    (() => {
+      try {
+        const savedTheme = localStorage.getItem("mh-theme");
+        const systemDark = window.matchMedia && window.matchMedia("(prefers-color-scheme: dark)").matches;
+        document.documentElement.dataset.theme = savedTheme || (systemDark ? "dark" : "light");
+      } catch (error) {
+        document.documentElement.dataset.theme = "light";
+      }
+    })();
+  </script>
+
   <title>Bảo hộ lao động Thái Nguyên | Minh Hải</title>
   <meta name="description" content="Bảo hộ lao động Minh Hải Thái Nguyên cung cấp giày bảo hộ, quần áo bảo hộ, mũ, găng tay, kính, thiết bị chống rơi và bảo vệ hô hấp. Liên hệ tư vấn và báo giá.">
   <meta name="robots" content="index,follow,max-image-preview:large">
@@ -74,6 +86,10 @@
         <a href="#lien-he">Liên hệ</a>
       </nav>
 
+      <button class="theme-toggle" type="button" data-theme-toggle aria-label="Chuyển giao diện sáng/tối" title="Chuyển giao diện sáng/tối">
+        <span class="theme-toggle-icon" aria-hidden="true">☾</span>
+      </button>
+
       <a class="btn btn-primary nav-cta" href="tel:0915418416">Gọi 0915 418 416</a>
     </div>
   </header>
@@ -83,7 +99,7 @@
       <div class="container hero-grid">
         <div class="hero-copy">
           <span class="eyebrow">BẢO HỘ LAO ĐỘNG • THÁI NGUYÊN</span>
-          <h1>Bảo hộ lao động Minh Hải Thái Nguyên</h1>
+          <h1>Bảo hộ lao động Minh Hải</h1>
           <p>
             Minh Hải cung cấp thiết bị bảo hộ lao động tại Thái Nguyên gồm giày bảo hộ,
             quần áo bảo hộ, mũ bảo hộ, găng tay, kính bảo hộ, thiết bị chống rơi và bảo vệ hô hấp.
@@ -116,7 +132,7 @@
         <div class="section-heading">
           <div>
             <span class="eyebrow">DANH MỤC SẢN PHẨM</span>
-            <h2>Thiết bị bảo hộ lao động tại Thái Nguyên</h2>
+            <h2>Thiết bị bảo hộ lao động</h2>
           </div>
           <p>
             Tham khảo các nhóm quần áo bảo hộ, giày bảo hộ, mũ bảo hộ, găng tay,
@@ -126,23 +142,23 @@
 
         <div id="danh-muc-seo" class="seo-category-grid" aria-label="Danh mục bảo hộ lao động tại Thái Nguyên">
           <a class="seo-category-card" href="quan-ao-bao-ho/">
-            <strong>Quần áo bảo hộ Thái Nguyên</strong>
+            <strong>Quần áo bảo hộ</strong>
             <span>Xem trang danh mục →</span>
           </a>
           <a class="seo-category-card" href="giay-bao-ho/">
-            <strong>Giày bảo hộ Thái Nguyên</strong>
+            <strong>Giày bảo hộ</strong>
             <span>Xem trang danh mục →</span>
           </a>
           <a class="seo-category-card" href="mu-bao-ho/">
-            <strong>Mũ bảo hộ Thái Nguyên</strong>
+            <strong>Mũ bảo hộ</strong>
             <span>Xem trang danh mục →</span>
           </a>
           <a class="seo-category-card" href="gang-tay-bao-ho/">
-            <strong>Găng tay bảo hộ Thái Nguyên</strong>
+            <strong>Găng tay bảo hộ</strong>
             <span>Xem trang danh mục →</span>
           </a>
           <a class="seo-category-card" href="kinh-bao-ho/">
-            <strong>Kính bảo hộ Thái Nguyên</strong>
+            <strong>Kính bảo hộ</strong>
             <span>Xem trang danh mục →</span>
           </a>
           <a class="seo-category-card" href="thiet-bi-chong-roi/">
@@ -224,7 +240,7 @@
       <div class="container contact-grid">
         <div>
           <span class="eyebrow">LIÊN HỆ</span>
-          <h2>Liên hệ Bảo hộ lao động Minh Hải Thái Nguyên</h2>
+          <h2>Liên hệ Bảo hộ lao động Minh Hải</h2>
           <p>Liên hệ Minh Hải để được tư vấn sản phẩm bảo hộ lao động, kiểm tra mẫu hàng, thông số và nhận báo giá theo nhu cầu.</p>
 
           <div class="contact-cards">
@@ -263,7 +279,7 @@
   <footer class="site-footer">
     <div class="container footer-grid">
       <div>
-        <strong>BẢO HỘ LAO ĐỘNG MINH HẢI THÁI NGUYÊN</strong>
+        <strong>BẢO HỘ LAO ĐỘNG MINH HẢI</strong>
         <p>Giày bảo hộ • Quần áo bảo hộ • Mũ • Găng tay • Kính • Thiết bị bảo hộ lao động.</p>
       </div>
       <div class="footer-links">
@@ -278,6 +294,7 @@
     </div>
   </footer>
 
+  <script src="theme.js"></script>
   <script src="script.js"></script>
 </body>
 </html>

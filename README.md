@@ -65,3 +65,10 @@ http://localhost:8080
 - Decap CMS 3.16.x CDN.
 - Không nhúng token GitHub vào client.
 - Ảnh sản phẩm nên là ảnh tự chụp hoặc ảnh AI/có giấy phép sử dụng phù hợp.
+
+## Cập nhật SEO V4.1
+- Tên danh mục hiển thị tự nhiên, không lặp hậu tố “Thái Nguyên” trên từng thẻ sản phẩm/danh mục.
+- Tín hiệu địa phương vẫn được giữ trong title, meta description, structured data, địa chỉ và nội dung mô tả tự nhiên.
+- Không dùng kỹ thuật ẩn từ khóa bằng CSS.
+- Thêm nút chuyển giao diện sáng/tối; lựa chọn được lưu trên trình duyệt.
+
