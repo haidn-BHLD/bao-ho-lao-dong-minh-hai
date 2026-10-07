@@ -8,11 +8,45 @@ public_folder: "assets/products"
 
 collections:
   - name: "catalog"
-    label: "Sản phẩm"
-    description: "Thêm, sửa, xóa và sắp xếp các sản phẩm bảo hộ lao động."
+    label: "Danh mục & Sản phẩm"
+    description: "Quản lý danh mục, sản phẩm và thương hiệu hiển thị trên website."
     files:
-      - name: "products"
+      - name: "categories"
         label: "Danh mục sản phẩm"
+        file: "data/categories.json"
+        fields:
+          - label: "Danh sách danh mục"
+            name: "categories"
+            widget: "list"
+            allow_add: true
+            allow_remove: true
+            allow_reorder: true
+            collapsed: true
+            summary: "{{fields.name}} — {{fields.key}}"
+            label_singular: "Thêm danh mục"
+            fields:
+              - {label: "Tên danh mục", name: "name", widget: "string"}
+              - {label: "Mã danh mục", name: "key", widget: "string", hint: "Viết ngắn, không dấu, không khoảng trắng. Ví dụ: welding, chemical, ear."}
+              - {label: "Tên nút lọc", name: "filter", widget: "string", required: false}
+              - {label: "Đường dẫn SEO", name: "path", widget: "string", required: false, hint: "Danh mục mới có thể để trống; website sẽ mở bằng trang danh mục động."}
+              - {label: "Chữ trên ảnh minh họa", name: "glyph", widget: "string", required: false}
+              - label: "Màu minh họa"
+                name: "visual"
+                widget: "select"
+                default: "visual-dark"
+                options:
+                  - {label: "Xanh lá", value: "visual-green"}
+                  - {label: "Xanh dương", value: "visual-blue"}
+                  - {label: "Cam", value: "visual-orange"}
+                  - {label: "Đỏ", value: "visual-red"}
+                  - {label: "Tím", value: "visual-purple"}
+                  - {label: "Xanh ngọc", value: "visual-cyan"}
+                  - {label: "Tối", value: "visual-dark"}
+                  - {label: "Vàng", value: "visual-yellow"}
+              - {label: "Mô tả danh mục", name: "description", widget: "text", required: false}
+
+      - name: "products"
+        label: "Sản phẩm"
         file: "data/products.json"
         fields:
           - label: "Danh sách sản phẩm"
@@ -26,39 +60,14 @@ collections:
             summary: "{{fields.name}} — {{fields.brand}}"
             label_singular: "Thêm sản phẩm"
             fields:
-              - label: "Tên sản phẩm"
-                name: "name"
-                widget: "string"
-                hint: "Tên hiển thị trên website."
-
-              - label: "Tên hãng"
-                name: "brand"
-                widget: "string"
-                hint: "Ví dụ: 3M, K2, Hans, Kingman..."
-
-              - label: "Nhóm sản phẩm"
-                name: "category"
-                widget: "select"
-                options:
-                  - {label: "Quần áo", value: "clothing"}
-                  - {label: "Giày bảo hộ", value: "footwear"}
-                  - {label: "Mũ & bảo vệ đầu", value: "head"}
-                  - {label: "Găng tay", value: "hand"}
-                  - {label: "Kính & mặt", value: "eye"}
-                  - {label: "Chống rơi", value: "fall"}
-                  - {label: "Bảo vệ hô hấp", value: "respiratory"}
-
+              - {label: "Tên sản phẩm", name: "name", widget: "string"}
+              - {label: "Thương hiệu", name: "brand", widget: "string", hint: "Ví dụ: 3M, K2, Hans, Kingman, Minh Hải..."}
+              - {label: "Mã danh mục", name: "category", widget: "string", hint: "Nhập đúng Mã danh mục đã khai báo ở phần Danh mục sản phẩm, ví dụ: footwear."}
               - label: "Ảnh sản phẩm"
                 name: "image"
                 widget: "image"
                 required: false
-                hint: "Ưu tiên WebP/JPEG đã tối ưu."
                 media_library:
                   config:
                     max_file_size: 5242880
-
-              - label: "Mô tả"
-                name: "description"
-                widget: "text"
-                required: false
-                hint: "Mô tả ngắn hiển thị trên card và cửa sổ chi tiết."
+              - {label: "Mô tả", name: "description", widget: "text", required: false}

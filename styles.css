@@ -252,3 +252,39 @@ html[data-theme="dark"] .product-card:hover{box-shadow:0 18px 34px rgba(0,0,0,.3
   .nav-wrap{gap:12px}
   .theme-toggle{width:42px;height:42px;flex-basis:42px}
 }
+
+
+/* V4.2 navigation, pagination and dynamic catalogue */
+.header-actions{display:flex;align-items:center;gap:10px;margin-left:auto}
+.menu-toggle{min-height:44px;padding:0 15px;border:1px solid var(--line);border-radius:14px;background:var(--surface);color:var(--text);display:inline-flex;gap:9px;align-items:center;font:inherit;font-size:12px;font-weight:850;letter-spacing:.08em;cursor:pointer;box-shadow:0 5px 16px rgba(23,50,77,.06)}
+.menu-toggle:hover{border-color:#efc18c;transform:translateY(-1px)}
+.site-menu{position:absolute;top:calc(100% + 4px);left:0;right:0;background:color-mix(in srgb,var(--surface) 96%,transparent);border-bottom:1px solid var(--line);box-shadow:0 20px 45px rgba(23,50,77,.16);backdrop-filter:blur(14px)}
+.site-menu[hidden]{display:none}
+.site-menu-inner{padding:20px 0 24px;display:grid;grid-template-columns:1fr 2.2fr 1fr 1fr;gap:14px;align-items:start}
+.site-menu-link{width:100%;min-height:46px;padding:12px 14px;border:1px solid var(--line);border-radius:14px;background:var(--surface);color:var(--text);display:flex;align-items:center;justify-content:space-between;font:inherit;font-weight:800;cursor:pointer}
+.site-menu-link:hover{border-color:#efc18c;color:var(--orange-dark)}
+.site-menu-products-toggle{margin-bottom:10px}
+.site-menu-categories{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:8px}
+.site-menu-categories.is-collapsed{display:none}
+.site-menu-categories a{padding:10px 12px;border-radius:12px;background:var(--bg);border:1px solid var(--line);font-size:13px;font-weight:700;color:var(--muted)}
+.site-menu-categories a:hover{color:var(--orange-dark);border-color:#efc18c}
+.catalog-loading{grid-column:1/-1;color:var(--muted);margin:0}
+.brand-control{display:flex;align-items:center;gap:10px;margin-left:auto}
+.brand-control label{font-size:12px;font-weight:850;color:var(--muted);text-transform:uppercase;letter-spacing:.08em}
+.product-pagination{display:flex;align-items:center;justify-content:center;gap:8px;margin-top:28px;flex-wrap:wrap}
+.product-pagination[hidden]{display:none}
+.page-nav,.page-number{min-width:40px;height:40px;border:1px solid var(--line);border-radius:12px;background:var(--surface);color:var(--text);font:inherit;font-weight:800;cursor:pointer}
+.page-number.active,.page-number:hover,.page-nav:hover:not(:disabled){background:var(--orange);border-color:var(--orange);color:#fff}
+.page-nav:disabled{opacity:.35;cursor:not-allowed}
+.page-numbers{display:flex;gap:6px;flex-wrap:wrap}
+.page-status{font-size:12px;color:var(--muted);font-weight:700;margin-left:6px}
+.category-products-heading{display:flex;justify-content:space-between;align-items:end;gap:24px;margin-bottom:28px}
+.category-products-heading h2{font-size:clamp(30px,4vw,44px);line-height:1.08;letter-spacing:-.035em;margin:8px 0 0}
+.category-info-section{padding-top:20px}
+.category-info-section .category-copy{max-width:900px}
+html[data-theme="dark"] .site-menu{background:rgba(19,30,39,.97)}
+html[data-theme="dark"] .menu-toggle,html[data-theme="dark"] .site-menu-link,html[data-theme="dark"] .page-nav,html[data-theme="dark"] .page-number{background:var(--surface);color:var(--text)}
+html[data-theme="dark"] .site-menu-categories a{background:#0d171e;color:var(--muted)}
+@media(max-width:980px){.site-menu-inner{grid-template-columns:1fr 1.7fr}.site-menu-categories{grid-template-columns:1fr 1fr}}
+@media(max-width:760px){.header-actions{gap:7px}.menu-toggle{padding:0 12px}.menu-toggle span:first-child{display:none}.site-menu-inner{grid-template-columns:1fr}.site-menu-categories{grid-template-columns:1fr 1fr}.category-products-heading{align-items:stretch;flex-direction:column}.brand-control{margin-left:0;width:100%;align-items:stretch;flex-direction:column}.brand-control .brand-filter{width:100%}.product-grid{grid-template-columns:repeat(2,minmax(0,1fr))}.product-image{height:160px}.product-image .product-visual{min-height:160px}.product-body{padding:16px}.product-body h3{font-size:17px}}
+@media(max-width:520px){.site-menu-categories{grid-template-columns:1fr}.product-grid{grid-template-columns:1fr}.product-image{height:190px}.product-image .product-visual{min-height:190px}}
