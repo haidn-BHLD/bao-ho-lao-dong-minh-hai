@@ -44,3 +44,14 @@ Website là static HTML/CSS/JS, phù hợp với:
 - Giá hoặc chính sách "Liên hệ báo giá".
 - Logo chính thức của doanh nghiệp.
 - Tên pháp nhân chính xác nếu muốn hiển thị trên website.
+
+
+## Bảng màu V2
+Bản V2 giữ nguyên bố cục giao diện hiện tại nhưng đổi nhận diện theo ngôn ngữ thị giác của ngành bảo hộ lao động:
+- Safety Orange `#EF7D22`: màu hành động, nút gọi/liên hệ, điểm nhấn cảnh báo.
+- Safety Yellow `#F2B705`: màu cảnh báo/nhận diện an toàn, dùng tiết chế.
+- Industrial Navy `#17324D`: màu nền thương hiệu, tạo cảm giác kỹ thuật và chuyên nghiệp.
+- Graphite `#202A31`: màu chữ chính.
+- Steel Gray `#6F8795`: màu trung tính hỗ trợ.
+
+Mục tiêu là để khách hàng liên tưởng nhanh tới PPE, công trường, an toàn và thiết bị kỹ thuật nhưng vẫn giữ cảm giác doanh nghiệp chuyên nghiệp.
