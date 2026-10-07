@@ -69,100 +69,44 @@
             <span class="eyebrow">DANH MỤC</span>
             <h2>Thiết bị bảo hộ lao động</h2>
           </div>
-          <p>Danh mục mẫu để khách hàng nhận diện nhanh nhóm thiết bị. Có thể bổ sung ảnh thực tế, mã hàng, tiêu chuẩn, thông số và báo giá sau.</p>
+          <p>Khách hàng có thể xem mẫu theo từng nhóm và hãng. Danh mục được cập nhật từ khu vực quản trị sản phẩm.</p>
         </div>
 
-        <div class="filters" role="tablist" aria-label="Lọc sản phẩm">
-          <button class="filter active" data-filter="all">Tất cả</button>
-          <button class="filter" data-filter="clothing">Quần áo</button>
-          <button class="filter" data-filter="footwear">Giày</button>
-          <button class="filter" data-filter="head">Mũ & bảo vệ đầu</button>
-          <button class="filter" data-filter="hand">Găng tay</button>
-          <button class="filter" data-filter="eye">Kính & mặt</button>
-          <button class="filter" data-filter="fall">Chống rơi</button>
+        <div class="product-toolbar">
+          <div class="filters" role="tablist" aria-label="Lọc sản phẩm">
+            <button class="filter active" data-filter="all">Tất cả</button>
+            <button class="filter" data-filter="clothing">Quần áo</button>
+            <button class="filter" data-filter="footwear">Giày</button>
+            <button class="filter" data-filter="head">Mũ & bảo vệ đầu</button>
+            <button class="filter" data-filter="hand">Găng tay</button>
+            <button class="filter" data-filter="eye">Kính & mặt</button>
+            <button class="filter" data-filter="fall">Chống rơi</button>
+            <button class="filter" data-filter="respiratory">Bảo vệ hô hấp</button>
+          </div>
+          <select id="brand-filter" class="brand-filter" aria-label="Lọc theo hãng">
+            <option value="all">Tất cả hãng</option>
+          </select>
         </div>
 
-        <div class="product-grid">
-          <article class="product-card" data-category="clothing">
-            <div class="product-visual visual-green"><span>ÁO</span></div>
-            <div class="product-body">
-              <span class="tag">QUẦN ÁO</span>
-              <h3>Quần áo bảo hộ lao động</h3>
-              <p>Trang phục làm việc, đồng phục bảo hộ và các mẫu theo nhu cầu môi trường sử dụng.</p>
-              <a href="#lien-he" class="text-link">Hỏi mẫu & thông tin →</a>
-            </div>
-          </article>
-
-          <article class="product-card" data-category="footwear">
-            <div class="product-visual visual-blue"><span>GIÀY</span></div>
-            <div class="product-body">
-              <span class="tag">GIÀY BẢO HỘ</span>
-              <h3>Giày bảo hộ</h3>
-              <p>Các dòng giày phục vụ môi trường công trường, nhà xưởng và khu vực có yêu cầu bảo vệ bàn chân.</p>
-              <a href="#lien-he" class="text-link">Hỏi mẫu & thông tin →</a>
-            </div>
-          </article>
-
-          <article class="product-card" data-category="head">
-            <div class="product-visual visual-orange"><span>MŨ</span></div>
-            <div class="product-body">
-              <span class="tag">BẢO VỆ ĐẦU</span>
-              <h3>Mũ bảo hộ</h3>
-              <p>Mũ bảo hộ và phụ kiện hỗ trợ bảo vệ đầu trong các môi trường làm việc phù hợp.</p>
-              <a href="#lien-he" class="text-link">Hỏi mẫu & thông tin →</a>
-            </div>
-          </article>
-
-          <article class="product-card" data-category="hand">
-            <div class="product-visual visual-red"><span>GĂNG</span></div>
-            <div class="product-body">
-              <span class="tag">BẢO VỆ TAY</span>
-              <h3>Găng tay bảo hộ</h3>
-              <p>Các loại găng tay theo tính chất công việc như cơ khí, thao tác vật liệu hoặc công trường.</p>
-              <a href="#lien-he" class="text-link">Hỏi mẫu & thông tin →</a>
-            </div>
-          </article>
-
-          <article class="product-card" data-category="eye">
-            <div class="product-visual visual-purple"><span>KÍNH</span></div>
-            <div class="product-body">
-              <span class="tag">BẢO VỆ MẮT & MẶT</span>
-              <h3>Kính bảo hộ & thiết bị bảo vệ mặt</h3>
-              <p>Nhóm sản phẩm hỗ trợ bảo vệ mắt và vùng mặt theo nhu cầu sử dụng thực tế.</p>
-              <a href="#lien-he" class="text-link">Hỏi mẫu & thông tin →</a>
-            </div>
-          </article>
-
-          <article class="product-card" data-category="clothing">
-            <div class="product-visual visual-cyan"><span>PHẢN QUANG</span></div>
-            <div class="product-body">
-              <span class="tag">NHẬN DIỆN</span>
-              <h3>Áo phản quang</h3>
-              <p>Trang phục/áo phản quang dành cho môi trường cần tăng khả năng nhận diện người lao động.</p>
-              <a href="#lien-he" class="text-link">Hỏi mẫu & thông tin →</a>
-            </div>
-          </article>
-
-          <article class="product-card" data-category="fall">
-            <div class="product-visual visual-dark"><span>CHỐNG RƠI</span></div>
-            <div class="product-body">
-              <span class="tag">LÀM VIỆC TRÊN CAO</span>
-              <h3>Thiết bị chống rơi</h3>
-              <p>Dây đai và thiết bị hỗ trợ làm việc trên cao; cần chọn theo đúng điều kiện và tiêu chuẩn áp dụng.</p>
-              <a href="#lien-he" class="text-link">Hỏi mẫu & thông tin →</a>
-            </div>
-          </article>
-
-          <article class="product-card" data-category="eye">
-            <div class="product-visual visual-yellow"><span>KHẨU TRANG</span></div>
-            <div class="product-body">
-              <span class="tag">BẢO VỆ HÔ HẤP</span>
-              <h3>Khẩu trang & mặt nạ</h3>
-              <p>Nhóm sản phẩm bảo vệ hô hấp; lựa chọn cần căn cứ vào môi trường, tác nhân và yêu cầu sử dụng.</p>
-              <a href="#lien-he" class="text-link">Hỏi mẫu & thông tin →</a>
-            </div>
-          </article>
+        <div id="product-grid" class="product-grid loading" aria-live="polite">
+          Đang tải danh mục sản phẩm...
         </div>
+
+        <div id="product-modal" class="product-modal" aria-hidden="true">
+          <div class="product-modal-panel" role="dialog" aria-modal="true" aria-labelledby="modal-product-name">
+            <button id="product-modal-close" class="product-modal-close" aria-label="Đóng">×</button>
+            <div id="modal-product-media" class="product-modal-media"></div>
+            <div class="product-modal-body">
+              <span id="modal-product-tag" class="tag"></span>
+              <h3 id="modal-product-name"></h3>
+              <div id="modal-product-brand" class="product-brand"></div>
+              <p id="modal-product-description"></p>
+              <a class="btn btn-primary btn-wide" href="#lien-he">Liên hệ hỏi mẫu / báo giá</a>
+              <p class="product-modal-note">Thông tin kỹ thuật và khả năng cung cấp được xác nhận theo từng mẫu hàng thực tế.</p>
+            </div>
+          </div>
+        </div>
+
       </div>
     </section>
 
@@ -247,7 +191,7 @@
     </div>
     <div class="container footer-bottom">
       <span>© <span id="year"></span> Minh Hải. All rights reserved.</span>
-      <span>Hình ảnh minh họa cần được sử dụng đúng quyền.</span>
+      <span>Hình ảnh minh họa cần được sử dụng đúng quyền.</span><a class="admin-link" href="admin/">Quản trị sản phẩm</a>
     </div>
   </footer>
 
