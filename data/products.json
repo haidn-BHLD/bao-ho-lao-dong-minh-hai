@@ -1,6 +1,13 @@
 {
   "products": [
     {
+      "name": "Găng tay ",
+      "brand": "3M",
+      "category": "hand",
+      "image": "assets/products/bao-tay-len_858c79f6d91549b89beb31530a8405e8_grande.jpg",
+      "description": "Test"
+    },
+    {
       "name": "Quần áo bảo hộ lao động",
       "brand": "Minh Hải",
       "category": "clothing",
