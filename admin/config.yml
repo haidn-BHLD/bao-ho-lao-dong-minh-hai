@@ -7,6 +7,70 @@ media_folder: "assets/products"
 public_folder: "assets/products"
 
 collections:
+  - name: "website"
+    label: "Nội dung website"
+    description: "Chỉnh phần giới thiệu doanh nghiệp, hình ảnh trang chủ và thông tin liên hệ."
+    media_folder: "assets/company"
+    public_folder: "assets/company"
+    files:
+      - name: "site"
+        label: "Trang chủ & Liên hệ"
+        file: "data/site.json"
+        fields:
+          - label: "Phần đầu trang"
+            name: "hero"
+            widget: "object"
+            fields:
+              - {label: "Dòng nhỏ", name: "eyebrow", widget: "string", required: false}
+              - {label: "Tiêu đề chính", name: "title", widget: "string"}
+              - {label: "Mô tả", name: "description", widget: "text"}
+              - {label: "Tên nút chính", name: "primary_cta_label", widget: "string", default: "Xem sản phẩm"}
+              - {label: "Đường dẫn nút chính", name: "primary_cta_url", widget: "string", default: "san-pham/"}
+
+          - label: "Giới thiệu công ty"
+            name: "about"
+            widget: "object"
+            fields:
+              - {label: "Dòng nhỏ", name: "eyebrow", widget: "string", required: false}
+              - {label: "Tiêu đề giới thiệu", name: "title", widget: "string"}
+              - {label: "Nội dung giới thiệu", name: "description", widget: "text"}
+              - label: "Các ý giới thiệu nổi bật"
+                name: "highlights"
+                widget: "list"
+                required: false
+                allow_add: true
+                allow_remove: true
+                allow_reorder: true
+                collapsed: true
+                summary: "{{fields.title}}"
+                fields:
+                  - {label: "Tiêu đề", name: "title", widget: "string"}
+                  - {label: "Nội dung", name: "description", widget: "text"}
+              - label: "Hình ảnh công ty"
+                name: "images"
+                widget: "list"
+                required: false
+                allow_add: true
+                allow_remove: true
+                allow_reorder: true
+                label_singular: "Thêm hình ảnh"
+                fields:
+                  - {label: "Ảnh", name: "image", widget: "image"}
+                  - {label: "Mô tả ảnh (ALT)", name: "alt", widget: "string", required: false}
+                  - {label: "Chú thích", name: "caption", widget: "string", required: false}
+
+          - label: "Thông tin liên hệ"
+            name: "contact"
+            widget: "object"
+            fields:
+              - {label: "Tiêu đề", name: "title", widget: "string"}
+              - {label: "Mô tả", name: "description", widget: "text", required: false}
+              - {label: "Số điện thoại", name: "phone", widget: "string"}
+              - {label: "Số điện thoại hiển thị", name: "phone_display", widget: "string"}
+              - {label: "Email", name: "email", widget: "string"}
+              - {label: "Địa chỉ", name: "address", widget: "text"}
+              - {label: "Link Google Maps", name: "map_url", widget: "string"}
+
   - name: "catalog"
     label: "Danh mục & Sản phẩm"
     description: "Quản lý danh mục, sản phẩm và thương hiệu hiển thị trên website."
@@ -61,13 +125,34 @@ collections:
             label_singular: "Thêm sản phẩm"
             fields:
               - {label: "Tên sản phẩm", name: "name", widget: "string"}
+              - {label: "Đường dẫn ngắn (slug)", name: "slug", widget: "string", required: false, hint: "Có thể để trống. Website sẽ tự tạo từ tên sản phẩm."}
               - {label: "Thương hiệu", name: "brand", widget: "string", hint: "Ví dụ: 3M, K2, Hans, Kingman, Minh Hải..."}
               - {label: "Mã danh mục", name: "category", widget: "string", hint: "Nhập đúng Mã danh mục đã khai báo ở phần Danh mục sản phẩm, ví dụ: footwear."}
-              - label: "Ảnh sản phẩm"
+              - label: "Ảnh đại diện"
                 name: "image"
                 widget: "image"
                 required: false
                 media_library:
                   config:
                     max_file_size: 5242880
-              - {label: "Mô tả", name: "description", widget: "text", required: false}
+              - label: "Ảnh bổ sung"
+                name: "gallery"
+                widget: "list"
+                required: false
+                allow_add: true
+                allow_remove: true
+                field: {label: "Ảnh", name: "image", widget: "image"}
+              - {label: "Mô tả ngắn", name: "description", widget: "text", required: false, hint: "Hiển thị ở thẻ sản phẩm và đầu trang chi tiết."}
+              - {label: "Thông tin chi tiết", name: "details", widget: "text", required: false, hint: "Nội dung dài hơn trên trang chi tiết sản phẩm."}
+              - label: "Thông số / đặc điểm"
+                name: "specifications"
+                widget: "list"
+                required: false
+                allow_add: true
+                allow_remove: true
+                collapsed: true
+                summary: "{{fields.label}}: {{fields.value}}"
+                fields:
+                  - {label: "Tên thông số", name: "label", widget: "string"}
+                  - {label: "Giá trị", name: "value", widget: "string"}
+              - {label: "Ghi chú liên hệ", name: "contact_note", widget: "text", required: false}

@@ -1,0 +1,31 @@
+MINH HẢI WEBSITE - CẬP NHẬT V4.3
+
+Mục tiêu chính:
+1. Trang chủ không còn đổ toàn bộ sản phẩm ra màn hình.
+2. Trang chủ tập trung: giới thiệu doanh nghiệp -> hình ảnh doanh nghiệp -> liên hệ.
+3. Nội dung giới thiệu, hình ảnh công ty và liên hệ có thể chỉnh qua /admin/.
+4. Header chỉ còn nút MENU dạng dropdown gọn ở góc phải.
+5. MENU gồm: Giới thiệu, Sản phẩm (submenu danh mục động), Thương hiệu, Liên hệ.
+6. Sản phẩm chuyển sang trang /san-pham/ và có phân trang.
+7. Bấm sản phẩm mở trang chi tiết riêng theo URL ?sp=<slug>, không còn popup modal.
+8. Trang chi tiết có ảnh, mô tả, thông tin chi tiết, thông số, sản phẩm liên quan và khối liên hệ.
+9. Các trang không phải trang chủ có cụm liên hệ nổi: Gọi điện / Email / Địa chỉ.
+10. Điện thoại và email ở trang chủ có nút Sao chép.
+11. Danh mục vẫn thêm/xóa/sắp xếp được trong admin.
+12. "Hãng" đổi thành "Thương hiệu".
+
+LƯU Ý KHI COPY:
+- Đây là gói cập nhật trên nền V4.2.
+- KHÔNG xóa data/products.json hiện tại.
+- KHÔNG xóa data/categories.json hiện tại.
+- KHÔNG xóa assets/products/ hiện tại.
+- Copy nội dung gói này vào repository hiện tại và chọn Replace cho file trùng.
+- Gói này thêm data/site.json và assets/company/ sẽ được Decap dùng khi tải ảnh công ty.
+
+SAU KHI DEPLOY KIỂM TRA:
+- /                   -> không còn danh sách sản phẩm, chỉ giới thiệu + liên hệ
+- /san-pham/          -> danh mục + toàn bộ sản phẩm + phân trang
+- /thuong-hieu/       -> danh sách thương hiệu
+- /giay-bao-ho/       -> sản phẩm thuộc danh mục, click đi trang chi tiết
+- /san-pham/chi-tiet.html?sp=... -> trang chi tiết sản phẩm
+- /admin/             -> có "Nội dung website" và "Danh mục & Sản phẩm"

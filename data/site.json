@@ -1,0 +1,38 @@
+{
+  "hero": {
+    "eyebrow": "BẢO HỘ LAO ĐỘNG • THÁI NGUYÊN",
+    "title": "Bảo hộ lao động Minh Hải",
+    "description": "Minh Hải cung cấp thiết bị bảo hộ lao động tại Thái Nguyên cho cá nhân, công trình, nhà xưởng và doanh nghiệp. Hỗ trợ tư vấn theo nhu cầu sử dụng thực tế.",
+    "primary_cta_label": "Xem sản phẩm",
+    "primary_cta_url": "san-pham/"
+  },
+  "about": {
+    "eyebrow": "GIỚI THIỆU",
+    "title": "Minh Hải - thiết bị bảo hộ lao động tại Thái Nguyên",
+    "description": "Minh Hải tập trung cung cấp các nhóm sản phẩm phục vụ an toàn lao động như giày bảo hộ, quần áo bảo hộ, mũ, găng tay, kính, thiết bị chống rơi và bảo vệ hô hấp. Khách hàng có thể liên hệ trực tiếp để được tư vấn mẫu, thông số và khả năng cung cấp theo nhu cầu thực tế.",
+    "images": [],
+    "highlights": [
+      {
+        "title": "Tư vấn theo nhu cầu",
+        "description": "Công trình, nhà xưởng, doanh nghiệp và cá nhân."
+      },
+      {
+        "title": "Danh mục linh hoạt",
+        "description": "Có thể bổ sung, sắp xếp và thay đổi danh mục qua trang quản trị."
+      },
+      {
+        "title": "Thông tin rõ ràng",
+        "description": "Điện thoại, email và địa chỉ được hiển thị trực tiếp."
+      }
+    ]
+  },
+  "contact": {
+    "title": "Liên hệ Bảo hộ lao động Minh Hải",
+    "description": "Liên hệ để trao đổi nhu cầu sử dụng, mẫu hàng, thông tin kỹ thuật và báo giá.",
+    "phone": "0915418416",
+    "phone_display": "0915 418 416",
+    "email": "haidn@baoholaodongminhhaitn.com",
+    "address": "Thửa đất số 163, tờ bản đồ số 68, số 486 đường Quang Trung, Tổ 1, phường Quyết Thắng, Tỉnh Thái Nguyên",
+    "map_url": "https://www.google.com/maps/search/?api=1&query=Th%E1%BB%ADa%20%C4%91%E1%BA%A5t%20s%E1%BB%91%20163%2C%20t%E1%BB%9D%20b%E1%BA%A3n%20%C4%91%E1%BB%93%20s%E1%BB%91%2068%2C%20s%E1%BB%91%20486%20%C4%91%C6%B0%E1%BB%9Dng%20Quang%20Trung%2C%20T%E1%BB%95%201%2C%20ph%C6%B0%E1%BB%9Dng%20Quy%E1%BA%BFt%20Th%E1%BA%AFng%2C%20t%E1%BB%89nh%20Th%C3%A1i%20Nguy%C3%AAn"
+  }
+}
